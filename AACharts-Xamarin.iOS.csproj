@@ -81,7 +81,9 @@
       </PackageReference>
     </ItemGroup>
     <ItemGroup>
-        <Folder Include="AACharts\Resources" />
+        <Folder Include="AACharts-Pro\Resources" />
+        <Folder Include="Demo\DataJson" />
+        <Folder Include="Demo\SeriesJson" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -92,58 +94,58 @@
         <None Include="Entitlements.plist" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="AACharts\AAChartCreator\AAChartModel.cs" />
-        <Compile Include="AACharts\AAChartCreator\AAChartView.cs" />
-        <Compile Include="AACharts\AAChartCreator\AAOptions.cs" />
-        <Compile Include="AACharts\AAChartCreator\AASeriesElement.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAAnimation.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAArea.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAArearange.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAAreaspline.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AABar.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAChart.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAColumn.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAColumnrange.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AACrosshair.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AADataElement.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AADataLabels.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAItemStyle.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AALabel.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AALabels.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AALegend.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AALine.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAMarker.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAPane.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAPie.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAPlotBandsElement.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAPlotLinesElement.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAPlotOptions.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AASeries.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAShadow.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AASpline.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAStyle.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AASubtitle.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AATitle.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AATooltip.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAXAxis.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAYAxis.cs" />
-        <Compile Include="AACharts\AATool\AAColor.cs" />
-        <Compile Include="AACharts\AATool\AAConstraintTool.cs" />
-        <Compile Include="AACharts\AATool\AAGradientColor.cs" />
-        <Compile Include="AACharts\AATool\AAJSStringPurer.cs" />
-        <Compile Include="Demo\AdditionalContent1\DrawChartWithOptionsVC.cs" />
-        <Compile Include="Demo\BasicContent\ViewController.cs" />
-        <Compile Include="Demo\BasicContent\ViewController.designer.cs">
+        <Compile Include="AACharts-Pro\AAChartCreator\AAChartModel.cs" />
+        <Compile Include="AACharts-Pro\AAChartCreator\AAChartView.cs" />
+        <Compile Include="AACharts-Pro\AAChartCreator\AAOptions.cs" />
+        <Compile Include="AACharts-Pro\AAChartCreator\AASeriesElement.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAAnimation.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAArea.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAArearange.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAAreaspline.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AABar.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAChart.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAColumn.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAColumnrange.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AACrosshair.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AADataElement.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AADataLabels.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAItemStyle.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AALabel.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AALabels.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AALegend.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AALine.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAMarker.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAPane.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAPie.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAPlotBandsElement.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAPlotLinesElement.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAPlotOptions.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AASeries.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAShadow.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AASpline.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAStyle.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AASubtitle.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AATitle.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AATooltip.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAXAxis.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAYAxis.cs" />
+        <Compile Include="AACharts-Pro\AATool\AAColor.cs" />
+        <Compile Include="AACharts-Pro\AATool\AAConstraintTool.cs" />
+        <Compile Include="AACharts-Pro\AATool\AAGradientColor.cs" />
+        <Compile Include="AACharts-Pro\AATool\AAJSStringPurer.cs" />
+        <Compile Include="Demo\ChartOptionsComposer.cs" />
+        <Compile Include="Demo\DrawChartWithOptionsVC.cs" />
+        <Compile Include="Demo\ViewController.cs" />
+        <Compile Include="Demo\ViewController.designer.cs">
           <DependentUpon>ViewController.cs</DependentUpon>
         </Compile>
-        <Compile Include="Demo\ChartComposer\ChartOptionsComposer.cs" />
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAStates.cs" />
-        <Compile Include="AACharts\AAOptionsModel\AAHover.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAStates.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModel\AAHover.cs" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include="AACharts\Content\AAChartView.html" />
+      <Content Include="AACharts-Pro\Content\AAChartView.html" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
