@@ -82,7 +82,6 @@
     </ItemGroup>
     <ItemGroup>
         <Folder Include="AACharts-Pro\Resources" />
-        <Folder Include="Demo\DataJson" />
         <Folder Include="Demo\SeriesJson" />
     </ItemGroup>
     <ItemGroup>
@@ -146,6 +145,36 @@
     </ItemGroup>
     <ItemGroup>
       <Content Include="AACharts-Pro\Content\AAChartView.html" />
+      <Content Include="Demo\DataJson\arcdiagram1Data.json" />
+      <Content Include="Demo\DataJson\arcdiagram2Data.json" />
+      <Content Include="Demo\DataJson\arcdiagram3Data.json" />
+      <Content Include="Demo\DataJson\bellcurveData.json" />
+      <Content Include="Demo\DataJson\bigHeatmapData.json" />
+      <Content Include="Demo\DataJson\columnpyramidData.json" />
+      <Content Include="Demo\DataJson\dependencywheelData.json" />
+      <Content Include="Demo\DataJson\drilldownTreemapData.json" />
+      <Content Include="Demo\DataJson\dumbbellData.json" />
+      <Content Include="Demo\DataJson\eulerData.json" />
+      <Content Include="Demo\DataJson\flameData.json" />
+      <Content Include="Demo\DataJson\heatmapData.json" />
+      <Content Include="Demo\DataJson\itemData.json" />
+      <Content Include="Demo\DataJson\lollipopData.json" />
+      <Content Include="Demo\DataJson\networkgraphData.json" />
+      <Content Include="Demo\DataJson\organizationData.json" />
+      <Content Include="Demo\DataJson\organizationNodesData.json" />
+      <Content Include="Demo\DataJson\sankeyData.json" />
+      <Content Include="Demo\DataJson\sunburst2Data.json" />
+      <Content Include="Demo\DataJson\sunburstData.json" />
+      <Content Include="Demo\DataJson\tilemapData.json" />
+      <Content Include="Demo\DataJson\timelineData.json" />
+      <Content Include="Demo\DataJson\treemapWithColorAxisData.json" />
+      <Content Include="Demo\DataJson\treemapWithLevelsData.json" />
+      <Content Include="Demo\DataJson\variablepieData.json" />
+      <Content Include="Demo\DataJson\variwideData.json" />
+      <Content Include="Demo\DataJson\vectorData.json" />
+      <Content Include="Demo\DataJson\vennData.json" />
+      <Content Include="Demo\DataJson\windbarbData.json" />
+      <Content Include="Demo\DataJson\wordcloudData.json" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
