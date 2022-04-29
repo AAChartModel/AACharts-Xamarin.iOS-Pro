@@ -82,7 +82,6 @@
     </ItemGroup>
     <ItemGroup>
         <Folder Include="AACharts-Pro\Resources" />
-        <Folder Include="Demo\SeriesJson" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -175,6 +174,8 @@
       <Content Include="Demo\DataJson\vennData.json" />
       <Content Include="Demo\DataJson\windbarbData.json" />
       <Content Include="Demo\DataJson\wordcloudData.json" />
+      <Content Include="Demo\SeriesJson\packedbubbleSeries.json" />
+      <Content Include="Demo\SeriesJson\streamgraphSeries.json" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
