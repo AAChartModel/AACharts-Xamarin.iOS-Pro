@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+        <ProjectGuid>{11BC1224-D99D-4321-B355-BA95D7C3B2AC}</ProjectGuid>
+        <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <TemplateGuid>{edc1b0fa-90cd-4038-8fad-98fe74adb368}</TemplateGuid>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>XamarinPlotKit</RootNamespace>
+        <AssemblyName>XamarinPlotKit</AssemblyName>
+        <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+        <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+        <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+        <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+        <DefineConstants>DEBUG</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchArch>x86_64</MtouchArch>
+        <MtouchLink>None</MtouchLink>
+        <MtouchDebug>true</MtouchDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchLink>None</MtouchLink>
+        <MtouchArch>x86_64</MtouchArch>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhone\Debug</OutputPath>
+        <DefineConstants>DEBUG</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchArch>ARM64</MtouchArch>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <CodesignKey>iPhone Developer</CodesignKey>
+        <MtouchDebug>true</MtouchDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhone\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <MtouchArch>ARM64</MtouchArch>
+        <CodesignKey>iPhone Developer</CodesignKey>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Core" />
+        <Reference Include="Xamarin.iOS" />
+        <Reference Include="System.Numerics" />
+        <Reference Include="System.Numerics.Vectors" />
+        <Reference Include="MonoTouch.Dialog-1" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Xamarin.TestCloud.Agent" Version="0.21.7" />
+      <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+      <PackageReference Include="Json.Net">
+        <Version>1.0.16</Version>
+      </PackageReference>
+      <PackageReference Include="Newtonsoft.Json">
+        <Version>12.0.2</Version>
+      </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="AACharts\Resources" />
+    </ItemGroup>
+    <ItemGroup>
+        <InterfaceDefinition Include="LaunchScreen.storyboard" />
+        <InterfaceDefinition Include="Main.storyboard" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Info.plist" />
+        <None Include="Entitlements.plist" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="AACharts\AAChartCreator\AAChartModel.cs" />
+        <Compile Include="AACharts\AAChartCreator\AAChartView.cs" />
+        <Compile Include="AACharts\AAChartCreator\AAOptions.cs" />
+        <Compile Include="AACharts\AAChartCreator\AASeriesElement.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAAnimation.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAArea.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAArearange.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAAreaspline.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AABar.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAChart.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAColumn.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAColumnrange.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AACrosshair.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AADataElement.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AADataLabels.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAItemStyle.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AALabel.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AALabels.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AALegend.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AALine.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAMarker.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAPane.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAPie.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAPlotBandsElement.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAPlotLinesElement.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAPlotOptions.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AASeries.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAShadow.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AASpline.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAStyle.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AASubtitle.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AATitle.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AATooltip.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAXAxis.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAYAxis.cs" />
+        <Compile Include="AACharts\AATool\AAColor.cs" />
+        <Compile Include="AACharts\AATool\AAConstraintTool.cs" />
+        <Compile Include="AACharts\AATool\AAGradientColor.cs" />
+        <Compile Include="AACharts\AATool\AAJSStringPurer.cs" />
+        <Compile Include="Demo\AdditionalContent1\DrawChartWithOptionsVC.cs" />
+        <Compile Include="Demo\BasicContent\ViewController.cs" />
+        <Compile Include="Demo\BasicContent\ViewController.designer.cs">
+          <DependentUpon>ViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Demo\ChartComposer\ChartOptionsComposer.cs" />
+        <Compile Include="Main.cs" />
+        <Compile Include="AppDelegate.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAStates.cs" />
+        <Compile Include="AACharts\AAOptionsModel\AAHover.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="AACharts\Content\AAChartView.html" />
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
