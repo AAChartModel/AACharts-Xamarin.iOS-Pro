@@ -66,6 +66,34 @@ namespace AAChartsDotNet
         public const string Polygon = "polygon";
         public const string Gauge = "gauge";
         public const string Errorbar = "errorbar";
+        
+        public const String Sankey          =  "sankey";
+        public const String Variablepie     =  "variablepie";
+        public const String Treemap         =  "treemap";
+        public const String Variwide        =  "variwide";
+        public const String Sunburst        =  "sunburst";
+        public const String Dependencywheel =  "dependencywheel";
+        public const String Heatmap         =  "heatmap";
+        public const String Packedbubble    =  "packedbubble";
+        public const String Venn            =  "venn";
+        public const String Dumbbell        =  "dumbbell";
+        public const String Lollipop        =  "lollipop";
+        public const String Streamgraph     =  "streamgraph";
+        public const String Columnpyramid   =  "columnpyramid";
+        public const String Xrange          =  "xrange";
+
+        public const String Tilemap         =  "tilemap";
+        public const String Vector          =  "vector";
+        public const String Bellcurve       =  "bellcurve";
+        public const String Timeline        =  "timeline";
+        public const String Item            =  "item";
+        public const String Windbarb        =  "windbarb";
+        public const String Networkgraph    =  "networkgraph";
+        public const String Wordcloud       =  "wordcloud";
+
+        public const String Organization    =  "organization";
+        public const String Arcdiagram      =  "arcdiagram";
+        public const String Flame           =  "flame";
     }
 
     public abstract class AAChartSubtitleAlignType
