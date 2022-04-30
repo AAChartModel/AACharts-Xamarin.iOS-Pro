@@ -13,7 +13,10 @@ namespace AAChartsDotNet
         public AAColumnrange columnrange;
         public AAArearange arearange;
         public AASeries series;
-
+        
+        public AAPackedbubble packedbubble;
+        public AATreemap treemap;
+        
 
         public AAPlotOptions Column(AAColumn prop)
         {
@@ -72,6 +75,17 @@ namespace AAChartsDotNet
         public AAPlotOptions Series(AASeries prop)
         {
             series = prop;
+            return this;
+        }
+        
+        
+        public AAPlotOptions Packedbubble(AAPackedbubble prop) {
+            packedbubble = prop;
+            return this;
+        }
+
+        public AAPlotOptions Treemap(AATreemap prop) {
+            treemap = prop;
             return this;
         }
 
