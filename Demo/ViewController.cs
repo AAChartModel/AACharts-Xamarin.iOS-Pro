@@ -43,10 +43,6 @@ namespace AAChartsDotNet
             
             table = new UITableView(View.Bounds); // defaults to Plain style
             
-            
-
-            var test = AAOptionsData.sankeyData;
-            
             string[][] tableItems = {
                 /*基础类型图表*/
                 new [] 
