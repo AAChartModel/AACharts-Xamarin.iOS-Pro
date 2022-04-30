@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 
 namespace AAChartsDotNet
@@ -66,7 +67,7 @@ namespace AAChartsDotNet
     }
 
 
-    public static AAOptions treemapWithLevelsData() {
+    public static AAOptions TreemapWithLevelsData() {
         return new AAOptions()
                 .Title(new AATitle()
                         .Text("Fruit Consumption Situation"))
@@ -91,7 +92,7 @@ namespace AAChartsDotNet
     }
 
 
-    public static AAOptions variwideChart() {
+    public static AAOptions VariwideChart() {
         AAChart aaChart = new AAChart()
                 .Type(AAChartType.Variwide);
 
@@ -139,7 +140,7 @@ namespace AAChartsDotNet
 
     }
 
-    public static AAOptions sunburstChart() {
+    public static AAOptions SunburstChart() {
         AAChart aaChart = new AAChart()
                 .Type(AAChartType.Variwide);
 
@@ -193,7 +194,7 @@ namespace AAChartsDotNet
         return aaOptions;
     }
 
-    public static AAOptions dependencywheelChart() {
+    public static AAOptions DependencywheelChart() {
         Dictionary<string, object> attributes = new Dictionary<string, object>();
         attributes.Add("dy", 5);
         return new AAOptions()
@@ -220,7 +221,7 @@ namespace AAChartsDotNet
 
 
     // https://jshare.Com.Cn/demos/hhhhiz
-    public static AAOptions heatmapChart() {
+    public static AAOptions HeatmapChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Heatmap))
@@ -268,7 +269,7 @@ namespace AAChartsDotNet
 
 
     // https://www.Highcharts.Com.Cn/demo/highcharts/packed-bubble
-    public static AAOptions packedbubbleChart() {
+    public static AAOptions PackedbubbleChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Packedbubble))
@@ -300,7 +301,7 @@ namespace AAChartsDotNet
     }
 
     // https://www.Highcharts.Com.Cn/demo/highcharts/packed-bubble-split
-    public static AAOptions packedbubbleSplitChart() {
+    public static AAOptions PackedbubbleSplitChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Packedbubble))
@@ -335,7 +336,7 @@ namespace AAChartsDotNet
     }
 
 
-    public static AAOptions vennChart() {
+    public static AAOptions VennChart() {
         return new AAOptions()
                 .Title(new AATitle()
                         .Text("The Unattainable Triangle"))
@@ -345,7 +346,7 @@ namespace AAChartsDotNet
                                 .Data(AAOptionsData.vennData)});
     }
 
-    public static AAOptions dumbbellChart() {
+    public static AAOptions DumbbellChart() {
         AAChart aaChart = new AAChart()
                 .Type(AAChartType.Dumbbell)
                 .Inverted(true);
@@ -392,7 +393,7 @@ namespace AAChartsDotNet
         return aaOptions;
     }
 
-    public static AAOptions lollipopChart() {
+    public static AAOptions LollipopChart() {
         AAChart aaChart = new AAChart()
                 .Type(AAChartType.Lollipop);
 
@@ -404,7 +405,7 @@ namespace AAChartsDotNet
 
         AAXAxis aaXAxis = new AAXAxis()
                 .Visible(true)
-                // .type("category")
+                // .Type("category")
                 ;
 
         AAYAxis aaYAxis = new AAYAxis()
@@ -438,7 +439,7 @@ namespace AAChartsDotNet
         return aaOptions;
     }
 
-    public static AAOptions streamgraphChart() {
+    public static AAOptions StreamgraphChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Streamgraph))
@@ -466,11 +467,11 @@ namespace AAChartsDotNet
                         .Enabled(true))
                 .Legend(new AALegend()
                         .Enabled(false))
-                // .Series(AAOptionsSeries.streamgraphSeries)
+                .Series(AAOptionsSeries.streamgraphSeries)
                 ;
     }
 
-    public static AAOptions columnpyramidChart() {
+    public static AAOptions ColumnpyramidChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Columnpyramid))
@@ -496,7 +497,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions tilemapChart() {
+    public static AAOptions TilemapChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Tilemap))
@@ -549,7 +550,7 @@ namespace AAChartsDotNet
     }
 
 
-    public static AAOptions treemapWithColorAxisDataChart() {
+    public static AAOptions TreemapWithColorAxisDataChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Treemap))
@@ -564,7 +565,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions drilldownTreemapChart() {
+    public static AAOptions DrilldownTreemapChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Treemap))
@@ -591,7 +592,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions xrangeChart() {
+    public static AAOptions XrangeChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Xrange))
@@ -624,7 +625,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions vectorChart() {
+    public static AAOptions VectorChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Vector))
@@ -638,7 +639,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions bellcurveChart() {
+    public static AAOptions BellcurveChart() {
         return new AAOptions()
                 .Title(new AATitle()
                         .Text("Bell curve"))
@@ -677,7 +678,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions timelineChart() {
+    public static AAOptions TimelineChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Timeline))
@@ -694,7 +695,7 @@ namespace AAChartsDotNet
     }
 
 
-    public static AAOptions itemChart() {
+    public static AAOptions ItemChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Item))
@@ -715,7 +716,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions windbarbChart() {
+    public static AAOptions WindbarbChart() {
         return new AAOptions()
                 .Title(new AATitle()
                         .Text("AAChartKit-Pro Wind Barbst"))
@@ -739,7 +740,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions networkgraphChart() {
+    public static AAOptions NetworkgraphChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Networkgraph))
@@ -755,7 +756,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions wordcloudChart() {
+    public static AAOptions WordcloudChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Wordcloud))
@@ -767,7 +768,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions eulerChart() {
+    public static AAOptions EulerChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Type(AAChartType.Venn))
@@ -784,7 +785,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions organizationChart() {
+    public static AAOptions OrganizationChart() {
         return new AAOptions()
                 .Chart(new AAChart()
 //            .Height(600)
@@ -834,7 +835,7 @@ namespace AAChartsDotNet
     }
 
     //https://www.Highcharts.Com/docs/chart-and-series-types/arc-diagram
-    public static AAOptions arcdiagramChart1()
+    public static AAOptions ArcdiagramChart1()
     {
             var data = AAOptionsData.arcdiagram1Data;
         return new AAOptions()
@@ -859,7 +860,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions arcdiagramChart2() {
+    public static AAOptions ArcdiagramChart2() {
         return new AAOptions()
                 .Title(new AATitle()
                         .Text("Highcharts Arc Diagram"))
@@ -886,7 +887,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions arcdiagramChart3() {
+    public static AAOptions ArcdiagramChart3() {
         return new AAOptions()
                 .Chart(new AAChart()
                         .Inverted(true))
@@ -910,7 +911,7 @@ namespace AAChartsDotNet
                 });
     }
 
-    public static AAOptions flameChart() {
+    public static AAOptions FlameChart() {
         var attributes = new Dictionary<string, object>();
         attributes.Add("dy", 5);
         return new AAOptions()
@@ -976,7 +977,7 @@ namespace AAChartsDotNet
     }
 
 
-    public static AAOptions packedbubbleSpiralChart() {
+    public static AAOptions PackedbubbleSpiralChart() {
         return new AAOptions()
                 .Chart(new AAChart()
                                 .Type(AAChartType.Packedbubble)
@@ -1010,3 +1011,4 @@ namespace AAChartsDotNet
 
 
 }
+
