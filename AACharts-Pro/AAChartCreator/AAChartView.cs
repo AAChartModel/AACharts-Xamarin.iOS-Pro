@@ -88,7 +88,7 @@ namespace AAChartsDotNet
 
         public void DrawChart()
         {
-            var javaScriptStr = "loadTheHighChartView('" + optionsJson + "','" + Frame.Size.Width + "','" + Frame.Size.Height + "')";
+            var javaScriptStr = "loadTheHighChartView('" + optionsJson + "','" + 0 + "','" + 0 + "')";
             SafeEvaluateJavaScriptString(javaScriptStr);
 
         }

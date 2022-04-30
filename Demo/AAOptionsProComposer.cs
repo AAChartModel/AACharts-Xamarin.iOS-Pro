@@ -644,12 +644,14 @@ namespace AAChartsDotNet
                 .Title(new AATitle()
                         .Text("Bell curve"))
                 .XAxisArray(new AAXAxis[]{
-                        // new AAXAxis()
-                        //         .Title(new AAAxisTitle()
-                        //         .Text("data")),
-                        // new AAXAxis()
-                        //         .Title(new AAAxisTitle()
-                        //         .Text("Bell curve")),
+                        new AAXAxis()
+                                // .Title(new AAAxisTitle()
+                                //         .Text("data"))
+                        ,
+                        new AAXAxis()
+                                // .Title(new AAAxisTitle()
+                                // .Text("Bell curve"))
+                        ,
                 })
                 .YAxisArray(new AAYAxis[]{
                         // new AAYAxis()
