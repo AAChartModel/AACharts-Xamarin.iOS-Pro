@@ -53,17 +53,17 @@ namespace AAChartsDotNet
 
         public void aa_drawChartWithOptions(AAOptions aaOptions)
         {
-            var fileName = "Content/AAChartView.html";
-            if (optionsJson == null)
-            {
+            var fileName = "AACharts-Pro/Content/AAChartView.html";
+            // if (optionsJson == null)
+            // {
                 ConfigureOptionsJsonStringWithAAOptions(aaOptions);
                 var localHtmlUrl = Path.Combine(NSBundle.MainBundle.BundlePath, fileName);
                 webView.LoadRequest(new NSUrlRequest(new NSUrl(localHtmlUrl, false)));
-            }
-            else
-            {
-                aa_refreshChartWithOptions(aaOptions);
-            }
+            // }
+            // else
+            // {
+            //     aa_refreshChartWithOptions(aaOptions);
+            // }
         }
 
         public void aa_refreshChartWithOptions(AAOptions aaOptions)
