@@ -15,9 +15,12 @@ namespace AAChartsDotNet
         }
         
         private NSArray getJsonDataWithJsonFileName(String jsonFileName) {
-            var localHtmlUrl = Path.Combine(NSBundle.MainBundle.BundlePath, jsonFileName);
+            var fileName = "Demo/DataJson/sunburst2Data.json";
+            // var fileName = "Content/AAChartView.html";
 
-            var path = NSBundle.MainBundle.PathForResource(jsonFileName, "json");
+            var localHtmlUrl = Path.Combine(NSBundle.MainBundle.BundlePath, fileName);
+
+            // var path = NSBundle.MainBundle.PathForResource(jsonFileName, "json");
             var jsonData = NSData.FromFile(localHtmlUrl);
             NSError error;
             var jsonObj = NSJsonSerialization.Deserialize(jsonData, NSJsonReadingOptions.MutableContainers, out error);
