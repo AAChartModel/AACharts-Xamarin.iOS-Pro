@@ -21,7 +21,7 @@ namespace AAChartsDotNet
             
             string[][] tableItems = {
                 /*基础类型图表*/
-                new []
+                new [] 
                 {"sankeyChart---桑基图",
                 "variablepieChart---可变宽度的饼图🍪",
                 "treemapChart---树形图🌲",
@@ -55,7 +55,6 @@ namespace AAChartsDotNet
                 "flameChart---火焰🔥图",
                 "packedbubbleSpiralChart---渐进变化的气泡🎈图"
                 },
-
             };
 
             var myTableDataSource = new TableSource(tableItems) {myViewController = this};

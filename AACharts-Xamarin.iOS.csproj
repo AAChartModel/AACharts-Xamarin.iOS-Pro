@@ -96,6 +96,15 @@
         <Compile Include="AACharts-Pro\AAChartCreator\AAChartView.cs" />
         <Compile Include="AACharts-Pro\AAChartCreator\AAOptions.cs" />
         <Compile Include="AACharts-Pro\AAChartCreator\AASeriesElement.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModelPro\AAColorAxis.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModelPro\AAColorVariation.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModelPro\AADataClassesElement.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModelPro\AAFilter.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModelPro\AALayoutAlgorithm.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModelPro\AALevelsElement.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModelPro\AAPackedbubble.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModelPro\AATextPath.cs" />
+        <Compile Include="AACharts-Pro\AAOptionsModelPro\AATreemap.cs" />
         <Compile Include="AACharts-Pro\AAOptionsModel\AAAnimation.cs" />
         <Compile Include="AACharts-Pro\AAOptionsModel\AAArea.cs" />
         <Compile Include="AACharts-Pro\AAOptionsModel\AAArearange.cs" />
