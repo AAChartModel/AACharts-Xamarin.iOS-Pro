@@ -3,11 +3,11 @@ using System;
 
 public class AALayoutAlgorithm {
 
-    public float gravitationalConstant;
-    public Boolean splitSeries;
-    public Boolean seriesInteraction;
-    public Boolean dragBetweenSeries;
-    public Boolean parentNodeLimit;
+    public object gravitationalConstant;
+    public object splitSeries;
+    public object seriesInteraction;
+    public object dragBetweenSeries;
+    public object parentNodeLimit;
 
     public AALayoutAlgorithm GravitationalConstant(float prop) {
         gravitationalConstant = prop;
