@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using Foundation;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Xamarin.Essentials;
 
 namespace AAChartsDotNet
@@ -174,6 +177,8 @@ namespace AAChartsDotNet
     public static Object[] Sunburst2Data() {
         return getJsonDataWithJsonFileName("sunburst2Data");
     }
+    
+    
 
     private static Object[] getJsonDataWithJsonFileName(String jsonFileName) {
         var fileName = @$"Demo/DataJson/{jsonFileName}.json";
@@ -191,10 +196,38 @@ namespace AAChartsDotNet
             Console.WriteLine(@$"成功🔥🔥🔥 📃JSON文件{jsonFileName}解码成功");
             var jsonArr = NSArray.FromNSObjects(jsonObj);
             //https://stackoverflow.com/questions/31679955/how-do-i-cast-my-nsarray-to-liststring-in-xamarin-ios
-            var finalJsonArr = Enumerable.Range(0, (int)((NSArray)jsonArr).Count)
+            var finalJsonArrStr = Enumerable.Range(0, (int)((NSArray)jsonArr).Count)
                 .Select(i => ((NSArray)jsonArr)
                     .GetItem<NSObject>(nuint.Parse(i.ToString())).ToString())
-                .ToArray();
+                .ToString()
+                ;
+            
+            // var finalJsonArr = JsonConvert.DeserializeObject<Object[]>(finalJsonArrStr);
+            
+            var text = File.ReadAllText(localJsonPath);
+            Object[] finalJsonArr = JsonConvert.DeserializeObject<Object[]>(text);
+
+            
+            // try
+            // {
+                // string jsonFileName2 = @$"{jsonFileName}.json";
+                // var assembly = typeof(Object).GetTypeInfo().Assembly;
+                //
+                // Stream stream = assembly.GetManifestResourceStream($"{assembly.GetName().Name}.{jsonFileName2}");
+                // using (var reader = new System.IO.StreamReader(stream))
+                // {
+                //     var jsonString = reader.ReadToEnd();
+                //
+                //     JObject obj = JObject.Parse(jsonString);
+                //
+                //
+                // }
+            // }
+            // catch(Exception e)
+            // {
+            //     Debug.WriteLine("PrayerException:>"+e);
+            // }
+            
             return finalJsonArr;
         // }
     }
