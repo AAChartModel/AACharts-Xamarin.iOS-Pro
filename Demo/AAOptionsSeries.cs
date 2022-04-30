@@ -7,22 +7,22 @@ namespace AAChartsDotNet
 {
     public class AAOptionsSeries
     {
-        public static Object[] packedbubbleSeries = getPackedbubbleSeries();
-        public static Object[] streamgraphSeries = getStreamgraphSeries();
+        public static object[] packedbubbleSeries = PackedbubbleSeries();
+        public static object[] streamgraphSeries = StreamgraphSeries();
 
-        private static Object[] getPackedbubbleSeries() {
-            return getJsonDataWithJsonFileName("packedbubbleSeries");
+        private static object[] PackedbubbleSeries() {
+            return GetJsonDataWithJsonFileName("packedbubbleSeries");
         }
 
-        private static Object[] getStreamgraphSeries() {
-            return getJsonDataWithJsonFileName("streamgraphSeries");
+        private static object[] StreamgraphSeries() {
+            return GetJsonDataWithJsonFileName("streamgraphSeries");
         }
         
-        private static Object[] getJsonDataWithJsonFileName(String jsonFileName) {
+        private static object[] GetJsonDataWithJsonFileName(String jsonFileName) {
             var fileName = @$"Demo/DataJson/{jsonFileName}.json";
             var localJsonPath = Path.Combine(NSBundle.MainBundle.BundlePath, fileName);
             var text = File.ReadAllText(localJsonPath);
-            Object[] finalJsonArr = JsonConvert.DeserializeObject<Object[]>(text);
+            object[] finalJsonArr = JsonConvert.DeserializeObject<object[]>(text);
             Console.WriteLine(@$"成功🔥🔥🔥 📃JSON文件{jsonFileName}解码成功");
             return finalJsonArr;
         }
