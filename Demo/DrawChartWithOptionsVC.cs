@@ -40,8 +40,39 @@ namespace AAChartsDotNet
 
             return chartType switch
             {
-                0 => ChartOptionsComposer.ConfigureAAPlotBandsForChart(),
-                1 => ChartOptionsComposer.ConfigureAAPlotLinesForChart()
+                0 => AAOptionsProComposer.SankeyChart(),
+                1 => AAOptionsProComposer.VariablepieChart(),
+                // 2 => AAOptionsProComposer.TreemapWithLevelsData(),
+                // 3 => AAOptionsProComposer.VariwideChart(),
+                // 4 => AAOptionsProComposer.SunburstChart(),
+                // 5 => AAOptionsProComposer.DependencywheelChart(),
+                // 6 => AAOptionsProComposer.HeatmapChart(),
+                // 7 => AAOptionsProComposer.PackedbubbleChart(),
+                // 8 => AAOptionsProComposer.PackedbubbleSplitChart(),
+                // 9 => AAOptionsProComposer.VennChart(),
+                // 10 => AAOptionsProComposer.DumbbellChart(),
+                // 11 => AAOptionsProComposer.LollipopChart(),
+                // 12 => AAOptionsProComposer.StreamgraphChart(),
+                // 13 => AAOptionsProComposer.ColumnpyramidChart(),
+                // 14 => AAOptionsProComposer.TilemapChart(),
+                // 15 => AAOptionsProComposer.TreemapWithColorAxisDataChart(),
+                // 16 => AAOptionsProComposer.DrilldownTreemapChart(),
+                // 17 => AAOptionsProComposer.XrangeChart(),
+                // 18 => AAOptionsProComposer.VectorChart(),
+                // 19 => AAOptionsProComposer.BellcurveChart(),
+                // 20 => AAOptionsProComposer.TimelineChart(),
+                // 21 => AAOptionsProComposer.ItemChart(),
+                // 22 => AAOptionsProComposer.WindbarbChart(),
+                // 23 => AAOptionsProComposer.NetworkgraphChart(),
+                // 24 => AAOptionsProComposer.WordcloudChart(),
+                // 25 => AAOptionsProComposer.EulerChart(),
+                // 26 => AAOptionsProComposer.OrganizationChart(),
+                // 27 => AAOptionsProComposer.ArcdiagramChart1(),
+                // 28 => AAOptionsProComposer.ArcdiagramChart2(),
+                // 29 => AAOptionsProComposer.ArcdiagramChart3(),
+                // 30 => AAOptionsProComposer.FlameChart(),
+                // 31 => AAOptionsProComposer.PackedbubbleSpiralChart(),
+
             };
         }
 
