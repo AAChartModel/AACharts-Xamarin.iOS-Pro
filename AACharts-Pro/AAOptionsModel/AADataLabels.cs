@@ -24,8 +24,13 @@ namespace AAChartsDotNet
         public Boolean crop;
         public String overflow;
         public Boolean softConnector;
-        public Object textPath;
+        
         public Object filter;
+        public AATextPath textPath;
+        public AATextPath linkTextPath;
+        public object padding; //When either the borderWidth or the backgroundColor is set, this is the padding within the box. Defaults to 5.
+        public String nodeFormat; //The format string specifying what to show for nodes in the sankey diagram. By default the nodeFormatter returns {point.name}. Defaults to undefined.
+
 
 
         public AADataLabels Enabled(bool prop)
@@ -147,16 +152,30 @@ namespace AAChartsDotNet
             softConnector = prop;
             return this;
         }
+        
+        
+        public AADataLabels Filter(Object prop) {
+            filter = prop;
+            return this;
+        }
 
-        public AADataLabels TextPath(Object prop)
-        {
+        public AADataLabels TextPath(AATextPath prop) {
             textPath = prop;
             return this;
         }
 
-        public AADataLabels Filter(Object prop)
-        {
-            filter = prop;
+        public AADataLabels LinkTextPath(AATextPath prop) {
+            linkTextPath = prop;
+            return this;
+        }
+
+        public AADataLabels Padding(float prop) {
+            padding = prop;
+            return this;
+        }
+
+        public AADataLabels NodeFormat(String prop) {
+            nodeFormat = prop;
             return this;
         }
     }
