@@ -183,86 +183,11 @@ namespace AAChartsDotNet
     private static Object[] getJsonDataWithJsonFileName(String jsonFileName) {
         var fileName = @$"Demo/DataJson/{jsonFileName}.json";
         var localJsonPath = Path.Combine(NSBundle.MainBundle.BundlePath, fileName);
-        var jsonData = NSData.FromFile(localJsonPath);
-        NSError error;
-        var jsonObj = NSJsonSerialization.Deserialize(jsonData, NSJsonReadingOptions.MutableContainers, out error);
-        // if (jsonData == null || error != null) 
-        // {
-        //    Console.WriteLine(@$"失败❌❌❌ 📃JSON文件{jsonFileName}解码失败");
-        //    return null;
-        // }
-        // else
-        // {
-            Console.WriteLine(@$"成功🔥🔥🔥 📃JSON文件{jsonFileName}解码成功");
-            var jsonArr = NSArray.FromNSObjects(jsonObj);
-            //https://stackoverflow.com/questions/31679955/how-do-i-cast-my-nsarray-to-liststring-in-xamarin-ios
-            var finalJsonArrStr = Enumerable.Range(0, (int)((NSArray)jsonArr).Count)
-                .Select(i => ((NSArray)jsonArr)
-                    .GetItem<NSObject>(nuint.Parse(i.ToString())).ToString())
-                .ToString()
-                ;
-            
-            // var finalJsonArr = JsonConvert.DeserializeObject<Object[]>(finalJsonArrStr);
-            
-            var text = File.ReadAllText(localJsonPath);
-            Object[] finalJsonArr = JsonConvert.DeserializeObject<Object[]>(text);
-
-            
-            // try
-            // {
-                // string jsonFileName2 = @$"{jsonFileName}.json";
-                // var assembly = typeof(Object).GetTypeInfo().Assembly;
-                //
-                // Stream stream = assembly.GetManifestResourceStream($"{assembly.GetName().Name}.{jsonFileName2}");
-                // using (var reader = new System.IO.StreamReader(stream))
-                // {
-                //     var jsonString = reader.ReadToEnd();
-                //
-                //     JObject obj = JObject.Parse(jsonString);
-                //
-                //
-                // }
-            // }
-            // catch(Exception e)
-            // {
-            //     Debug.WriteLine("PrayerException:>"+e);
-            // }
-            
-            return finalJsonArr;
-        // }
+        var text = File.ReadAllText(localJsonPath);
+        Object[] finalJsonArr = JsonConvert.DeserializeObject<Object[]>(text);
+        Console.WriteLine(@$"成功🔥🔥🔥 📃JSON文件{jsonFileName}解码成功");
+        return finalJsonArr;
     }
-    
-//     + (id)getJsonDataWithJsonFileName:(NSString *)jsonFileName
-//     {
-//         NSString *path = [[NSBundle mainBundle] pathForResource:jsonFileName ofType:@"json"];
-//         NSData *jsonData = [[NSData alloc] initWithContentsOfFile:path];
-//         NSError *error;
-//         id jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
-//         if (!jsonData || error) {
-//         NSLog(@"失败❌❌❌ 📃JSON文件%@解码失败",jsonFileName);
-//         return nil;
-//     } else {
-//         NSLog(@"成功🔥🔥🔥 📃JSON文件%@解码成功",jsonFileName);
-//         return jsonObj;
-//     }
-// }
-    
-    // //https://www.jianshu.com/p/a4b2bd5deca6
-    // private static func getJsonDataWithJsonFileName(_ jsonFileName: String) -> [Any] {
-    //     let path = Bundle.main.path(forResource: jsonFileName, ofType: "json")
-    //     let url = URL(fileURLWithPath: path!)
-    //     do {
-    //         let data = try Data(contentsOf: url)
-    //         let jsonData:Any = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)
-    //         let jsonArr = jsonData as! NSArray
-    //         
-    //         return jsonArr as! [Any]
-    //         
-    //     } catch let error as Error? {
-    //         print("读取本地数据出现错误!",error ?? "WARNING!!!!")
-    //     }
-    //     return [Any]()
-    // }
 
     private static Object[] getSingleGroupCategoryDataElementArrayWithY(int y) {
         ArrayList dataArr = new ArrayList();
