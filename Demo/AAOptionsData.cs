@@ -149,32 +149,32 @@ namespace AAChartsDotNet
         return GetJsonDataWithJsonFileName("eulerData");
     }
 
-    public static object[] OrganizationData() {
+    private static object[] OrganizationData() {
         return GetJsonDataWithJsonFileName("organizationData");
     }
 
-    public static object[] OrganizationNodesData() {
+    private static object[] OrganizationNodesData() {
         return GetJsonDataWithJsonFileName("organizationNodesData");
     }
 
 
-    public static object[] Arcdiagram1Data() {
+    private static object[] Arcdiagram1Data() {
         return GetJsonDataWithJsonFileName("arcdiagram1Data");
     }
 
-    public static object[] Arcdiagram2Data() {
+    private static object[] Arcdiagram2Data() {
         return GetJsonDataWithJsonFileName("arcdiagram2Data");
     }
 
-    public static object[] Arcdiagram3Data() {
+    private static object[] Arcdiagram3Data() {
         return GetJsonDataWithJsonFileName("arcdiagram3Data");
     }
 
-    public static object[] FlameData() {
+    private static object[] FlameData() {
         return GetJsonDataWithJsonFileName("flameData");
     }
 
-    public static object[] Sunburst2Data() {
+    private static object[] Sunburst2Data() {
         return GetJsonDataWithJsonFileName("sunburst2Data");
     }
     
