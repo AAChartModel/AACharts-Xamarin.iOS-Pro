@@ -11,7 +11,7 @@ namespace AAChartsDotNet
 {
     public class AAOptionsData
     {
-
+ //注意: 此处的变量全部都会生成默认值(默认全部调用一遍对应的静态方法)
     public static NSArray variablepieData = getVariablepieData();
     public static NSArray variwideData = getVariwideData();
     public static NSArray heatmapData = getHeatmapData();
@@ -175,8 +175,9 @@ namespace AAChartsDotNet
     }
 
     private static NSArray getJsonDataWithJsonFileName(String jsonFileName) {
-        var path = NSBundle.MainBundle.PathForResource(jsonFileName, "json");
-        var jsonData = NSData.FromFile(path);
+        var fileName = @$"Demo/DataJson/{jsonFileName}.json";
+        var localJsonPath = Path.Combine(NSBundle.MainBundle.BundlePath, fileName);
+        var jsonData = NSData.FromFile(localJsonPath);
         NSError error;
         var jsonObj = NSJsonSerialization.Deserialize(jsonData, NSJsonReadingOptions.MutableContainers, out error);
         if (jsonData == null || error != null) 
