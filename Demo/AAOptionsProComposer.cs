@@ -10,23 +10,23 @@ namespace AAChartsDotNet
                 .Title(new AATitle()
                         .Text("AAChartKit-Pro 桑基图"))
                 .Colors(new String[]{
-                        // AAColor.RgbaColor(137,78,36),
-                        // AAColor.RgbaColor(220,36,30),
-                        // AAColor.RgbaColor(255,206,0),
-                        // AAColor.RgbaColor(1,114,41),
-                        // AAColor.RgbaColor(0,175,173),
-                        // AAColor.RgbaColor(215,153,175),
-                        // AAColor.RgbaColor(106,114,120),
-                        // AAColor.RgbaColor(114,17,84),
-                        // AAColor.RgbaColor(0,0,0),
-                        // AAColor.RgbaColor(0,24,168),
-                        // AAColor.RgbaColor(0,160,226),
-                        // AAColor.RgbaColor(106,187,170)
+                        AAColor.Rgba(137,78,36),
+                        AAColor.Rgba(220,36,30),
+                        AAColor.Rgba(255,206,0),
+                        AAColor.Rgba(1,114,41),
+                        AAColor.Rgba(0,175,173),
+                        AAColor.Rgba(215,153,175),
+                        AAColor.Rgba(106,114,120),
+                        AAColor.Rgba(114,17,84),
+                        AAColor.Rgba(0,0,0),
+                        AAColor.Rgba(0,24,168),
+                        AAColor.Rgba(0,160,226),
+                        AAColor.Rgba(106,187,170)
                 })
                 .Series(new AASeriesElement[]{
                         new AASeriesElement()
                                 .Type(AAChartType.Sankey)
-                                // .Keys(new String[]{"from", "to", "weight"})
+                                .Keys(new String[]{"from", "to", "weight"})
                                 .Data(AAOptionsData.sankeyData),
                 });
     }
@@ -75,18 +75,18 @@ namespace AAChartsDotNet
                 .Series(new AASeriesElement[]{
                         new AASeriesElement()
                                 .Type(AAChartType.Treemap)
-                                // .Levels(new AALevelsElement[]{
-                                //         new AALevelsElement()
-                                //                 .Level(1)
-                                //                 .LayoutAlgorithm("sliceAndDice")
-                                //                 .DataLabels(new AADataLabels()
-                                //                 .Enabled(true)
-                                //                 .Align(AAChartAlignType.Left)
-                                //                 .VerticalAlign(AAChartVerticalAlignType.Top)
-                                //                 .Style(new AAStyle()
-                                //                         .FontSize(15f)
-                                //                         .FontWeight(AAChartFontWeightType.Bold)))
-                                // })
+                                .Levels(new AALevelsElement[]{
+                                        new AALevelsElement()
+                                                .Level(1)
+                                                .LayoutAlgorithm("sliceAndDice")
+                                                .DataLabels(new AADataLabels()
+                                                .Enabled(true)
+                                                .Align(AAChartAlignType.Left)
+                                                .VerticalAlign(AAChartVerticalAlignType.Top)
+                                                .Style(new AAStyle()
+                                                        .FontSize(15f)
+                                                        .FontWeight(AAChartFontWeightType.Bold)))
+                                })
                                 .Data(AAOptionsData.treemapWithLevelsData)});
     }
 
@@ -160,25 +160,25 @@ namespace AAChartsDotNet
         AASeriesElement[] seriesElementArr = new AASeriesElement[]{
                 new AASeriesElement()
                         .Type(AAChartType.Sunburst)
-                        // .AllowDrillToNode(true)
-                        // .Levels(new AALevelsElement[]{
-                        //         new AALevelsElement()
-                        //                 .Level(2)
-                        //                 .ColorByPoint(true)
-                        //                 .LayoutAlgorithm("sliceAndDice")
-                        //         ,
-                        //         new AALevelsElement()
-                        //                 .Level(3)
-                        //                 .ColorVariation(new AAColorVariation()
-                        //                 .Key("brightness")
-                        //                 .To(-0.5f)),
-                        //         new AALevelsElement()
-                        //                 .Level(4)
-                        //                 .ColorVariation(new AAColorVariation()
-                        //                 .Key("brightness")
-                        //                 .To(0.5f))
-                        //
-                        // })
+                        .AllowDrillToNode(true)
+                        .Levels(new AALevelsElement[]{
+                                new AALevelsElement()
+                                        .Level(2)
+                                        .ColorByPoint(true)
+                                        .LayoutAlgorithm("sliceAndDice")
+                                ,
+                                new AALevelsElement()
+                                        .Level(3)
+                                        .ColorVariation(new AAColorVariation()
+                                        .Key("brightness")
+                                        .To(-0.5f)),
+                                new AALevelsElement()
+                                        .Level(4)
+                                        .ColorVariation(new AAColorVariation()
+                                        .Key("brightness")
+                                        .To(0.5f))
+                        
+                        })
                         .Data(AAOptionsData.sunburstData)
         };
 
@@ -206,7 +206,7 @@ namespace AAChartsDotNet
                         new AASeriesElement()
                                 .Type(AAChartType.Dependencywheel)
                                 .Name("Dependency wheel series")
-                                // .Keys(new String[]{"from","to","weight"})
+                                .Keys(new String[]{"from","to","weight"})
                                 .Data(AAOptionsData.dependencywheelData)
                                 .DataLabels(new AADataLabels()
                                 .Enabled(true)
@@ -239,10 +239,10 @@ namespace AAChartsDotNet
                         })
                         .Title(new AATitle()
                                 .Text("")))
-                // .ColorAxis(new AAColorAxis()
-                //         .Min(0f)
-                //         .MinColor("#FFFFFF")
-                //         .MaxColor("#7cb5ec"))
+                .ColorAxis(new AAColorAxis()
+                        .Min(0f)
+                        .MinColor("#FFFFFF")
+                        .MaxColor("#7cb5ec"))
                 .Legend(new AALegend()
                         .Enabled(true)
                         .Align(AAChartAlignType.Right)
@@ -279,23 +279,23 @@ namespace AAChartsDotNet
                         .UseHTML(true)
                         .PointFormat("<b>{point.Name}:<\\/b> {point.Y}m CO<sub>2<\\/sub>"))
                 .PlotOptions(new AAPlotOptions()
-                        // .Packedbubble(new AAPackedbubble()
-                        //         .MinSize("30%")
-                        //         .MaxSize("120%")
-                        //         .ZMin(0f)
-                        //         .ZMax(1000f)
-                        //         .LayoutAlgorithm(new AALayoutAlgorithm() //packedbubbleChart 和 packedbubbleSplitChart 只有layoutAlgorithm这一段不一样
-                        //                 .GravitationalConstant(0.02f)
-                        //                 .SplitSeries(false))
-                        //         .DataLabels(new AADataLabels()
-                        //                 .Enabled(true)
-                        //                 .Format("{point.Name}")
-                        //                 .Filter(new AAFilter()
-                        //                         .Property("y")
-                        //                         .Operator(">")
-                        //                         .Value(250f))))
+                        .Packedbubble(new AAPackedbubble()
+                                .MinSize("30%")
+                                .MaxSize("120%")
+                                .ZMin(0f)
+                                .ZMax(1000f)
+                                .LayoutAlgorithm(new AALayoutAlgorithm() //packedbubbleChart 和 packedbubbleSplitChart 只有layoutAlgorithm这一段不一样
+                                        .GravitationalConstant(0.02f)
+                                        .SplitSeries(false))
+                                .DataLabels(new AADataLabels()
+                                        .Enabled(true)
+                                        .Format("{point.Name}")
+                                        .Filter(new AAFilter()
+                                                .Property("y")
+                                                .Operator(">")
+                                                .Value(250f))))
                 )
-                // .Series(AAOptionsSeries.packedbubbleSeries)
+                .Series(AAOptionsSeries.packedbubbleSeries)
                 ;
     }
 
@@ -311,26 +311,26 @@ namespace AAChartsDotNet
                         .UseHTML(true)
                         .PointFormat("<b>{point.Name}:<\\/b> {point.Y}m CO<sub>2<\\/sub>"))
                 .PlotOptions(new AAPlotOptions()
-                        // .Packedbubble(new AAPackedbubble()
-                        //         .MinSize("30%")
-                        //         .MaxSize("120%")
-                        //         .ZMin(0f)
-                        //         .ZMax(1000f)
-                        //         .LayoutAlgorithm(new AALayoutAlgorithm() //packedbubbleChart 和 packedbubbleSplitChart 只有layoutAlgorithm这一段不一样
-                        //                 .GravitationalConstant(0.05f)
-                        //                 .SplitSeries(true)
-                        //                 .SeriesInteraction(false)
-                        //                 .DragBetweenSeries(true)
-                        //                 .ParentNodeLimit(true))
-                        //         .DataLabels(new AADataLabels()
-                        //                 .Enabled(true)
-                        //                 .Format("{point.Name}")
-                        //                 .Filter(new AAFilter()
-                        //                         .Property("y")
-                        //                         .Operator(">")
-                        //                         .Value(250f))))
+                        .Packedbubble(new AAPackedbubble()
+                                .MinSize("30%")
+                                .MaxSize("120%")
+                                .ZMin(0f)
+                                .ZMax(1000f)
+                                .LayoutAlgorithm(new AALayoutAlgorithm() //packedbubbleChart 和 packedbubbleSplitChart 只有layoutAlgorithm这一段不一样
+                                        .GravitationalConstant(0.05f)
+                                        .SplitSeries(true)
+                                        .SeriesInteraction(false)
+                                        .DragBetweenSeries(true)
+                                        .ParentNodeLimit(true))
+                                .DataLabels(new AADataLabels()
+                                        .Enabled(true)
+                                        .Format("{point.Name}")
+                                        .Filter(new AAFilter()
+                                                .Property("y")
+                                                .Operator(">")
+                                                .Value(250f))))
                 )
-                // .Series(AAOptionsSeries.packedbubbleSeries)
+                .Series(AAOptionsSeries.packedbubbleSeries)
                 ;
     }
 
@@ -506,28 +506,28 @@ namespace AAChartsDotNet
                         .Visible(false))
                 .YAxis(new AAYAxis()
                         .Visible(false))
-                // .ColorAxis(new AAColorAxis()
-                //         .DataClasses(new AADataClassesElement[]{
-                //                 new AADataClassesElement()
-                //                         .From(0f)
-                //                         .To(1000000f)
-                //                         .Color("#F9EDB3")
-                //                         .Name("< 1M"),
-                //                 new AADataClassesElement()
-                //                         .From(1000000f)
-                //                         .To(5000000f)
-                //                         .Color("#FFC428")
-                //                         .Name("1M - 5M"),
-                //                 new AADataClassesElement()
-                //                         .From(5000000f)
-                //                         .To(20000000f)
-                //                         .Color("#F9EDB3")
-                //                         .Name("5M - 20M"),
-                //                 new AADataClassesElement()
-                //                         .From(20000000f)
-                //                         .Color("#FF2371")
-                //                         .Name("> 20M"),
-                //         }))
+                .ColorAxis(new AAColorAxis()
+                        .DataClasses(new AADataClassesElement[]{
+                                new AADataClassesElement()
+                                        .From(0f)
+                                        .To(1000000f)
+                                        .Color("#F9EDB3")
+                                        .Name("< 1M"),
+                                new AADataClassesElement()
+                                        .From(1000000f)
+                                        .To(5000000f)
+                                        .Color("#FFC428")
+                                        .Name("1M - 5M"),
+                                new AADataClassesElement()
+                                        .From(5000000f)
+                                        .To(20000000f)
+                                        .Color("#F9EDB3")
+                                        .Name("5M - 20M"),
+                                new AADataClassesElement()
+                                        .From(20000000f)
+                                        .Color("#FF2371")
+                                        .Name("> 20M"),
+                        }))
                 .Tooltip(new AATooltip()
                         .Enabled(true)
                         .HeaderFormat("")
@@ -555,9 +555,9 @@ namespace AAChartsDotNet
                         .Type(AAChartType.Treemap))
                 .Title(new AATitle()
                         .Text("矩形树图"))
-                // .ColorAxis(new AAColorAxis()
-                //         .MinColor("#FFFFFF")
-                //         .MaxColor("#FF0000"))
+                .ColorAxis(new AAColorAxis()
+                        .MinColor("#FFFFFF")
+                        .MaxColor("#FF0000"))
                 .Series(new AASeriesElement[]{
                         new AASeriesElement()
                                 .Data(AAOptionsData.treemapWithColorAxisData)
@@ -573,20 +573,20 @@ namespace AAChartsDotNet
                 .Subtitle(new AASubtitle()
                         .Text("点击下钻"))
                 .PlotOptions(new AAPlotOptions()
-                        // .Treemap(new AATreemap()
-                        //         .AllowTraversingTree(true)
-                        //         .LayoutAlgorithm("squarified"))
+                        .Treemap(new AATreemap()
+                                .AllowTraversingTree(true)
+                                .LayoutAlgorithm("squarified"))
                 )
                 .Series(new AASeriesElement[]{
                         new AASeriesElement()
                                 .Type(AAChartType.Treemap)
-                                // .Levels(new AALevelsElement[]{
-                                //         new AALevelsElement()
-                                //                 .Level(1)
-                                //                 .DataLabels(new AADataLabels()
-                                //                         .Enabled(true))
-                                //                 .BorderWidth(3f)
-                                // })
+                                .Levels(new AALevelsElement[]{
+                                        new AALevelsElement()
+                                                .Level(1)
+                                                .DataLabels(new AADataLabels()
+                                                        .Enabled(true))
+                                                .BorderWidth(3f)
+                                })
                                 .Data(AAOptionsData.drilldownTreemapData)
                 });
     }
@@ -662,9 +662,9 @@ namespace AAChartsDotNet
                         new AASeriesElement()
                                 .Name("Bell curve")
                                 .Type(AAChartType.Bellcurve)
-                                // .XAxis(1)
+                                .XAxis(1)
                                 .YAxis(1)
-                                // .BaseSeries(1)
+                                .BaseSeries(1)
                                 .ZIndex(-1),
                         new AASeriesElement()
                                 .Name("Data")
@@ -707,7 +707,7 @@ namespace AAChartsDotNet
                 .Series(new AASeriesElement[]{
                         new AASeriesElement()
                                 .Name("Representatives")
-                                // .Keys(new String[]{"name","y","color","label"})
+                                .Keys(new String[]{"name","y","color","label"})
                                 .Data(AAOptionsData.itemData)
                                 .DataLabels(new AADataLabels()
                                         .Enabled(false))
@@ -731,7 +731,7 @@ namespace AAChartsDotNet
                                 .Type(AAChartType.Area)
                                 .Name("Wind speed")
                                 .Data(AAOptionsData.windbarbData)
-                                // .Keys(new String[]{"y"})
+                                .Keys(new String[]{"y"})
                                 .Marker(new AAMarker()
                                 .FillColor("#ffffff")//点的填充色(用来设置折线连接点的填充色)
                                 .LineWidth(5f)//外沿线的宽度(用来设置折线连接点的轮廓描边的宽度)
@@ -795,38 +795,38 @@ namespace AAChartsDotNet
                         new AASeriesElement()
                                 .Type(AAChartType.Organization)
                                 .Name("Highsoft")
-                                // .Keys(new String[]{"from", "to"})
+                                .Keys(new String[]{"from", "to"})
                                 .Data(AAOptionsData.organizationData)
-                                // .Levels(new AALevelsElement[]{
-                                //         new AALevelsElement()
-                                //                 .Level(0)
-                                //                 .Color("silver")
-                                //                 .DataLabels(new AADataLabels()
-                                //                         .Color(AAColor.Black))
-                                //                 .Height(25f)
-                                //         ,
-                                //         new AALevelsElement()
-                                //                 .Level(1)
-                                //                 .Color("silver")
-                                //                 .DataLabels(new AADataLabels()
-                                //                         .Color(AAColor.Black))
-                                //                 .Height(25f)
-                                //         ,
-                                //         new AALevelsElement()
-                                //                 .Level(2)
-                                //                 .Color("#980104")
-                                //         ,
-                                //         new AALevelsElement()
-                                //                 .Level(4)
-                                //                 .Color("#359154")
-                                // })
-                                // .Nodes(AAOptionsData.organizationNodesData)
+                                .Levels(new AALevelsElement[]{
+                                        new AALevelsElement()
+                                                .Level(0)
+                                                .Color("silver")
+                                                .DataLabels(new AADataLabels()
+                                                        .Color(AAColor.Black))
+                                                .Height(25f)
+                                        ,
+                                        new AALevelsElement()
+                                                .Level(1)
+                                                .Color("silver")
+                                                .DataLabels(new AADataLabels()
+                                                        .Color(AAColor.Black))
+                                                .Height(25f)
+                                        ,
+                                        new AALevelsElement()
+                                                .Level(2)
+                                                .Color("#980104")
+                                        ,
+                                        new AALevelsElement()
+                                                .Level(4)
+                                                .Color("#359154")
+                                })
+                                .Nodes(AAOptionsData.organizationNodesData)
                                 .ColorByPoint(false)
                                 .Color("#007ad0")
                                 .DataLabels(new AADataLabels()
                                         .Color(AAColor.White))
                                 // .BorderColor(AAColor.White)
-                                // .NodeWidth(65f)
+                                .NodeWidth(65f)
                 })
                 .Tooltip(new AATooltip()
                     // .Outside(true)
@@ -834,7 +834,9 @@ namespace AAChartsDotNet
     }
 
     //https://www.Highcharts.Com/docs/chart-and-series-types/arc-diagram
-    public static AAOptions arcdiagramChart1() {
+    public static AAOptions arcdiagramChart1()
+    {
+            var data = AAOptionsData.arcdiagram1Data;
         return new AAOptions()
                 .Colors(new String[]{"#293462", "#a64942", "#fe5f55", "#fff1c1", "#5bd1d7", "#ff502f", "#004d61",
                         "#ff8a5c", "#fff591", "#f5587b", "#fad3cf", "#a696c8", "#5BE7C4", "#266A2E", "#593E1A"})
@@ -842,18 +844,18 @@ namespace AAChartsDotNet
                         .Text("Main train connections in Europe"))
                 .Series(new AASeriesElement[]{
                         new AASeriesElement()
-                                // .Keys(new String[]{"from", "to", "weight"})
+                                .Keys(new String[]{"from", "to", "weight"})
                                 .Type(AAChartType.Arcdiagram)
                                 .Name("Train connections")
-                                // .LinkWeight(1)
-                                // .CenteredLinks(true)
+                                .LinkWeight(1)
+                                .CenteredLinks(true)
                                 .DataLabels(new AADataLabels()
                                         .Rotation(90f)
                                         .Y(30f)
                                         .Align(AAChartAlignType.Left)
                                         .Color(AAColor.Black))
-                                // .Offset("65%")
-                                .Data(AAOptionsData.arcdiagram1Data)
+                                .Offset("65%")
+                                .Data(data)
                 });
     }
 
@@ -865,20 +867,20 @@ namespace AAChartsDotNet
                         .Text("Arc Diagram with marker symbols"))
                 .Series(new AASeriesElement[]{
                         new AASeriesElement()
-                                // .LinkWeight(1)
-                                // .Keys(new String[]{"from", "to", "weight"})
+                                .LinkWeight(1)
+                                .Keys(new String[]{"from", "to", "weight"})
                                 .Type(AAChartType.Arcdiagram)
                                 .Marker(new AAMarker()
                                         .Symbol(AAChartSymbolType.Triangle)
                                         .LineWidth(2f)
                                         .LineColor(AAColor.White))
-                                // .CenteredLinks(true)
+                                .CenteredLinks(true)
                                 .DataLabels(new AADataLabels()
                                         .Format("{point.FromNode.Name} → {point.ToNode.Name}")
-                                        // .NodeFormat("{point.Name}")
+                                        .NodeFormat("{point.Name}")
                                         .Color(AAColor.Black)
-                                        // .LinkTextPath(new AATextPath()
-                                        //         .Enabled(true))
+                                        .LinkTextPath(new AATextPath()
+                                                .Enabled(true))
                                         )
                                 .Data(AAOptionsData.arcdiagram2Data)
                 });
@@ -892,8 +894,8 @@ namespace AAChartsDotNet
                         .Text("Highcharts Inverted Arc Diagram"))
                 .Series(new AASeriesElement[]{
                         new AASeriesElement()
-                                // .Keys(new String[]{"from", "to", "weight"})
-//                .CenterPos("50%")
+                                .Keys(new String[]{"from", "to", "weight"})
+                // .CenterPos("50%")
                                 .Type(AAChartType.Arcdiagram)
                                 .DataLabels(new AADataLabels()
                                         .Align(AAChartAlignType.Right)
@@ -901,10 +903,10 @@ namespace AAChartsDotNet
                                         .Y(-2f)
                                         .Color("#333333")
                                         .Overflow("allow")
-                                        // .Padding(0f)
+                                        .Padding(0f)
                                         )
-                                // .Offset("60%")
-                                // .Data(AAOptionsData.arcdiagram3Data)
+                                .Offset("60%")
+                                .Data(AAOptionsData.arcdiagram3Data)
                 });
     }
 
@@ -947,22 +949,22 @@ namespace AAChartsDotNet
                                 .Type(AAChartType.Flame)
                                 .Data(AAOptionsData.flameData)
                                 .YAxis(1)
-                                // .XAxis(1)
+                                .XAxis(1)
                         ,
                         new AASeriesElement()
                                 // .Visible(false)
                                 .Size("100%")
                                 .Type(AAChartType.Sunburst)
                                 .Data(AAOptionsData.sunburst2Data)
-                                // .AllowDrillToNode(true)
-                                // .Cursor("pointer")
-//                                 .Levels(new AALevelsElement[]{
-//                                         new AALevelsElement()
-//                                                 .Level(1)
-// //                        .LevelIsConstant(false)
-//                                                 .DataLabels(new AADataLabels()
-//                                                 .Enabled(false))
-//                                 })
+                                .AllowDrillToNode(true)
+                                .Cursor("pointer")
+                                .Levels(new AALevelsElement[]{
+                                        new AALevelsElement()
+                                                .Level(1)
+//                        .LevelIsConstant(false)
+                                                .DataLabels(new AADataLabels()
+                                                .Enabled(false))
+                                })
                                 .DataLabels(new AADataLabels()
                                 .TextPath(new AATextPath()
                                         .Attributes(attributes)
@@ -985,29 +987,25 @@ namespace AAChartsDotNet
                 .Tooltip(new AATooltip()
                         .UseHTML(true)
                         .PointFormat("{point.Name}: {point.Y}m CO2"))
-                // .PlotOptions(new AAPlotOptions()
-                //         .Packedbubble(new AAPackedbubble()
-                //                 .UseSimulation(false)
-                //                 .MinSize("20%")
-                //                 .MaxSize("80%")
-                //                 .DataLabels(new AADataLabels()
-                //                         .Enabled(true)
-                //                         .Format("{point.Name}")
-                //                         .Filter(new AAFilter()
-                //                                 .Property("y")
-                //                                 .Operator(">")
-                //                                 .Value(250f))
-                //                         .Style(new AAStyle()
-                //                                 .Color(AAColor.Black)
-                //                                 .TextOutline("none")
-                //                                 .FontWeight("normal")))))
-                // .Series(AAOptionsSeries.packedbubbleSeries)
+                .PlotOptions(new AAPlotOptions()
+                        .Packedbubble(new AAPackedbubble()
+                                .UseSimulation(false)
+                                .MinSize("20%")
+                                .MaxSize("80%")
+                                .DataLabels(new AADataLabels()
+                                        .Enabled(true)
+                                        .Format("{point.Name}")
+                                        .Filter(new AAFilter()
+                                                .Property("y")
+                                                .Operator(">")
+                                                .Value(250f))
+                                        .Style(new AAStyle()
+                                                .Color(AAColor.Black)
+                                                .TextOutline("none")
+                                                .FontWeight("normal")))))
+                .Series(AAOptionsSeries.packedbubbleSeries)
                 ;
     }
-
-  
-
-
     }
 
 
