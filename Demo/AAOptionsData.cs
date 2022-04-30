@@ -16,100 +16,100 @@ namespace AAChartsDotNet
     public class AAOptionsData
     {
  //注意: 此处的变量全部都会生成默认值(默认全部调用一遍对应的静态方法)
-    public static Object[] variablepieData = VariablepieData();
-    public static Object[] variwideData = VariwideData();
-    public static Object[] heatmapData = HeatmapData();
-    public static Object[] columnpyramidData = ColumnpyramidData();
-    public static Object[] treemapWithColorAxisData = TreemapWithColorAxisData();
-    public static Object[] drilldownTreemapData = DrilldownTreemapData();
+    public static object[] variablepieData = VariablepieData();
+    public static object[] variwideData = VariwideData();
+    public static object[] heatmapData = HeatmapData();
+    public static object[] columnpyramidData = ColumnpyramidData();
+    public static object[] treemapWithColorAxisData = TreemapWithColorAxisData();
+    public static object[] drilldownTreemapData = DrilldownTreemapData();
 
-    public static Object[] sankeyData = SankeyData();
-    public static Object[] dependencywheelData = DependencywheelData();
-    public static Object[] sunburstData = SunburstData();
-    public static Object[] dumbbellData = DumbbellData();
-    public static Object[] vennData = VennData();
-    public static Object[] lollipopData = LollipopData();
-    public static Object[] tilemapData = TilemapData();
-    public static Object[] treemapWithLevelsData = TreemapWithLevelsData();
+    public static object[] sankeyData = SankeyData();
+    public static object[] dependencywheelData = DependencywheelData();
+    public static object[] sunburstData = SunburstData();
+    public static object[] dumbbellData = DumbbellData();
+    public static object[] vennData = VennData();
+    public static object[] lollipopData = LollipopData();
+    public static object[] tilemapData = TilemapData();
+    public static object[] treemapWithLevelsData = TreemapWithLevelsData();
     public static object[] xrangeData = XrangeData();
-    public static Object[] vectorData = VectorData();
-    public static Object[] bellcurveData = BellcurveData();
-    public static Object[] timelineData = TimelineData();
-    public static Object[] itemData = ItemData();
-    public static Object[] windbarbData = WindbarbData();
-    public static Object[] networkgraphData = NetworkgraphData();
-    public static Object[] wordcloudData = WordcloudData();
-    public static Object[] eulerData = EulerData();
+    public static object[] vectorData = VectorData();
+    public static object[] bellcurveData = BellcurveData();
+    public static object[] timelineData = TimelineData();
+    public static object[] itemData = ItemData();
+    public static object[] windbarbData = WindbarbData();
+    public static object[] networkgraphData = NetworkgraphData();
+    public static object[] wordcloudData = WordcloudData();
+    public static object[] eulerData = EulerData();
 
-    public static Object[] organizationData = OrganizationData();
-    public static Object[] organizationNodesData = OrganizationNodesData();
+    public static object[] organizationData = OrganizationData();
+    public static object[] organizationNodesData = OrganizationNodesData();
 
-    public static Object[] arcdiagram1Data = Arcdiagram1Data();
-    public static Object[] arcdiagram2Data = Arcdiagram2Data();
-    public static Object[] arcdiagram3Data = Arcdiagram3Data();
-    public static Object[] flameData = FlameData();
-    public static Object[] sunburst2Data = Sunburst2Data();
+    public static object[] arcdiagram1Data = Arcdiagram1Data();
+    public static object[] arcdiagram2Data = Arcdiagram2Data();
+    public static object[] arcdiagram3Data = Arcdiagram3Data();
+    public static object[] flameData = FlameData();
+    public static object[] sunburst2Data = Sunburst2Data();
 
-    private static Object[] VariablepieData() {
+    private static object[] VariablepieData() {
         return GetJsonDataWithJsonFileName("variablepieData");
     }
 
-    private static Object[] VariwideData() {
+    private static object[] VariwideData() {
         return GetJsonDataWithJsonFileName("variwideData");
     }
 
-    private static Object[] HeatmapData() {
+    private static object[] HeatmapData() {
         return GetJsonDataWithJsonFileName("heatmapData");
     }
 
-    private static Object[] ColumnpyramidData() {
+    private static object[] ColumnpyramidData() {
         return GetJsonDataWithJsonFileName("columnpyramidData");
     }
 
-    private static Object[] TreemapWithColorAxisData() {
+    private static object[] TreemapWithColorAxisData() {
         return GetJsonDataWithJsonFileName("treemapWithColorAxisData");
     }
 
-    private static Object[] DrilldownTreemapData() {
+    private static object[] DrilldownTreemapData() {
         return GetJsonDataWithJsonFileName("drilldownTreemapData");
     }
 
-    private static Object[] SankeyData() {
+    private static object[] SankeyData() {
         return GetJsonDataWithJsonFileName("sankeyData");
     }
 
-    private static Object[] DependencywheelData() {
+    private static object[] DependencywheelData() {
         return GetJsonDataWithJsonFileName("dependencywheelData");
     }
 
-    private static Object[] SunburstData() {
+    private static object[] SunburstData() {
         return GetJsonDataWithJsonFileName("sunburstData");
     }
 
-    private static Object[] DumbbellData() {
+    private static object[] DumbbellData() {
         return GetJsonDataWithJsonFileName("dumbbellData");
     }
 
-    private static Object[] VennData() {
+    private static object[] VennData() {
         return GetJsonDataWithJsonFileName("vennData");
     }
 
-    private static Object[] LollipopData() {
+    private static object[] LollipopData() {
         return GetJsonDataWithJsonFileName("lollipopData");
     }
 
-    private static Object[] TilemapData() {
+    private static object[] TilemapData() {
         return GetJsonDataWithJsonFileName("tilemapData");
     }
 
-    private static Object[] TreemapWithLevelsData() {
+    private static object[] TreemapWithLevelsData() {
         return GetJsonDataWithJsonFileName("treemapWithLevelsData");
     }
 
     private static object[] XrangeData() {
         ArrayList dataArr = new ArrayList();
         for (int i = 0; i < 20; i++) {
-            Object[] data = SingleGroupCategoryDataElementArrayWithY(i);
+            object[] data = SingleGroupCategoryDataElementArrayWithY(i);
             foreach (var dataElement in data) {
                 dataArr.Add(dataElement);
             }
@@ -117,79 +117,79 @@ namespace AAChartsDotNet
         return dataArr.ToArray();
     }
 
-    private static Object[] VectorData() {
+    private static object[] VectorData() {
         return GetJsonDataWithJsonFileName("vectorData");
     }
 
-    private static Object[] BellcurveData() {
+    private static object[] BellcurveData() {
         return GetJsonDataWithJsonFileName("bellcurveData");
     }
 
-    private static Object[] TimelineData() {
+    private static object[] TimelineData() {
         return GetJsonDataWithJsonFileName("timelineData");
     }
 
-    private static Object[] ItemData() {
+    private static object[] ItemData() {
         return GetJsonDataWithJsonFileName("itemData");
     }
 
-    private static Object[] WindbarbData() {
+    private static object[] WindbarbData() {
         return GetJsonDataWithJsonFileName("windbarbData");
     }
 
-    private static Object[] NetworkgraphData() {
+    private static object[] NetworkgraphData() {
         return GetJsonDataWithJsonFileName("networkgraphData");
     }
 
-    private static Object[] WordcloudData() {
+    private static object[] WordcloudData() {
         return GetJsonDataWithJsonFileName("wordcloudData");
     }
 
-    private static Object[] EulerData() {
+    private static object[] EulerData() {
         return GetJsonDataWithJsonFileName("eulerData");
     }
 
-    public static Object[] OrganizationData() {
+    public static object[] OrganizationData() {
         return GetJsonDataWithJsonFileName("organizationData");
     }
 
-    public static Object[] OrganizationNodesData() {
+    public static object[] OrganizationNodesData() {
         return GetJsonDataWithJsonFileName("organizationNodesData");
     }
 
 
-    public static Object[] Arcdiagram1Data() {
+    public static object[] Arcdiagram1Data() {
         return GetJsonDataWithJsonFileName("arcdiagram1Data");
     }
 
-    public static Object[] Arcdiagram2Data() {
+    public static object[] Arcdiagram2Data() {
         return GetJsonDataWithJsonFileName("arcdiagram2Data");
     }
 
-    public static Object[] Arcdiagram3Data() {
+    public static object[] Arcdiagram3Data() {
         return GetJsonDataWithJsonFileName("arcdiagram3Data");
     }
 
-    public static Object[] FlameData() {
+    public static object[] FlameData() {
         return GetJsonDataWithJsonFileName("flameData");
     }
 
-    public static Object[] Sunburst2Data() {
+    public static object[] Sunburst2Data() {
         return GetJsonDataWithJsonFileName("sunburst2Data");
     }
     
     
 
-    private static Object[] GetJsonDataWithJsonFileName(String jsonFileName) {
+    private static object[] GetJsonDataWithJsonFileName(String jsonFileName) {
         var fileName = @$"Demo/DataJson/{jsonFileName}.json";
         var localJsonPath = Path.Combine(NSBundle.MainBundle.BundlePath, fileName);
         var text = File.ReadAllText(localJsonPath);
-        Object[] finalJsonArr = JsonConvert.DeserializeObject<Object[]>(text);
+        object[] finalJsonArr = JsonConvert.DeserializeObject<object[]>(text);
         Console.WriteLine(@$"成功🔥🔥🔥 📃JSON文件{jsonFileName}解码成功");
         return finalJsonArr;
     }
 
-    private static Object[] SingleGroupCategoryDataElementArrayWithY(int y) {
+    private static object[] SingleGroupCategoryDataElementArrayWithY(int y) {
         ArrayList dataArr = new ArrayList();
         int x = 0;
         Random random = new Random();
