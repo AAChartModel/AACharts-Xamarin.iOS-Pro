@@ -37,7 +37,7 @@ namespace AAChartsDotNet
                 int red,
                 int green,
                 int blue,
-                float alpha
+                float alpha = 1
         )
         {
             return "rgba(" + red + "," + green + "," + blue + "," + alpha + ")";
