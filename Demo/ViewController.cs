@@ -45,7 +45,7 @@ namespace AAChartsDotNet
             
             
 
-            var test = getJsonDataWithJsonFileName("sunburst2Data");
+            var test = AAOptionsData.sankeyData;
             
             string[][] tableItems = {
                 /*基础类型图表*/
