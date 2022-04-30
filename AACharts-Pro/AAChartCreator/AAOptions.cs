@@ -14,11 +14,14 @@ namespace AAChartsDotNet
         public AAYAxis[] yAxisArray;
         public AATooltip tooltip;
         public AAPlotOptions plotOptions;
-        public AASeriesElement[] series;
+        public object[] series;
         public AALegend legend;
         public AAPane pane;
         public object[] colors;
         public bool touchEventEnabled;
+        
+        public AAColorAxis colorAxis;
+
 
         public AAOptions Chart(AAChart prop)
         {
@@ -72,7 +75,7 @@ namespace AAChartsDotNet
             return this;
         }
 
-        public AAOptions Series(AASeriesElement[] prop)
+        public AAOptions Series(object[] prop)
         {
             series = prop;
             return this;
@@ -99,6 +102,11 @@ namespace AAChartsDotNet
         public AAOptions TouchEventEnabled(bool prop)
         {
             touchEventEnabled = prop;
+            return this;
+        }
+        
+        public AAOptions ColorAxis(AAColorAxis prop) {
+            colorAxis = prop;
             return this;
         }
 
