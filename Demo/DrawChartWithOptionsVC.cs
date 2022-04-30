@@ -44,7 +44,7 @@ namespace AAChartsDotNet
 
             return chartType switch
             {
-                 0 => AAOptionsProComposer.ArcdiagramChart1(),
+                 0 => AAOptionsProComposer.SankeyChart(),
                  1 => AAOptionsProComposer.VariablepieChart(),
                  2 => AAOptionsProComposer.TreemapWithLevelsData(),
                  3 => AAOptionsProComposer.VariwideChart(),
