@@ -19,7 +19,7 @@ namespace AAChartsDotNet
         }
         
         private static object[] GetJsonDataWithJsonFileName(String jsonFileName) {
-            var fileName = @$"Demo/DataJson/{jsonFileName}.json";
+            var fileName = @$"Demo/SeriesJson/{jsonFileName}.json";
             var localJsonPath = Path.Combine(NSBundle.MainBundle.BundlePath, fileName);
             var text = File.ReadAllText(localJsonPath);
             object[] finalJsonArr = JsonConvert.DeserializeObject<object[]>(text);
