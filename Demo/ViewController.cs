@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using System;
+using System.IO;
 using UIKit;
 using AAChartsDotNet.AAChartCreator;
 
@@ -12,12 +13,36 @@ namespace AAChartsDotNet
         public ViewController(IntPtr handle) : base(handle)
         {
         }
+        
+        private NSArray getJsonDataWithJsonFileName(String jsonFileName) {
+            var localHtmlUrl = Path.Combine(NSBundle.MainBundle.BundlePath, jsonFileName);
+
+            var path = NSBundle.MainBundle.PathForResource(jsonFileName, "json");
+            var jsonData = NSData.FromFile(localHtmlUrl);
+            NSError error;
+            var jsonObj = NSJsonSerialization.Deserialize(jsonData, NSJsonReadingOptions.MutableContainers, out error);
+            if (jsonData == null || error != null) 
+            {
+                Console.WriteLine(@$"失败❌❌❌ 📃JSON文件{jsonFileName}解码失败");
+                return null;
+            }
+            else
+            {
+                Console.WriteLine(@$"成功🔥🔥🔥 📃JSON文件{jsonFileName}解码成功");
+                NSArray jsonArr = NSArray.FromNSObjects(jsonObj);
+                return jsonArr;
+            }
+        }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             
             table = new UITableView(View.Bounds); // defaults to Plain style
+            
+            
+
+            var test = getJsonDataWithJsonFileName("sunburst2Data");
             
             string[][] tableItems = {
                 /*基础类型图表*/

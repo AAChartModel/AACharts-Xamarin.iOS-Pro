@@ -140,7 +140,9 @@
         <Compile Include="AACharts-Pro\AATool\AAConstraintTool.cs" />
         <Compile Include="AACharts-Pro\AATool\AAGradientColor.cs" />
         <Compile Include="AACharts-Pro\AATool\AAJSStringPurer.cs" />
-        <Compile Include="Demo\ChartOptionsComposer.cs" />
+        <Compile Include="Demo\AAOptionsData.cs" />
+        <Compile Include="Demo\AAOptionsProComposer.cs" />
+        <Compile Include="Demo\AAOptionsSeries.cs" />
         <Compile Include="Demo\DrawChartWithOptionsVC.cs" />
         <Compile Include="Demo\ViewController.cs" />
         <Compile Include="Demo\ViewController.designer.cs">
