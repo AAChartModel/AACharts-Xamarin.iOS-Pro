@@ -184,25 +184,27 @@ namespace AAChartsDotNet
         var fileName = @$"Demo/DataJson/{jsonFileName}.json";
         var localJsonPath = Path.Combine(NSBundle.MainBundle.BundlePath, fileName);
         var text = File.ReadAllText(localJsonPath);
-        object[] finalJsonArr = JsonConvert.DeserializeObject<object[]>(text);
+        var finalJsonArr = JsonConvert.DeserializeObject<object[]>(text);
         Console.WriteLine(@$"成功🔥🔥🔥 📃JSON文件{jsonFileName}解码成功");
         return finalJsonArr;
     }
 
     private static object[] SingleGroupCategoryDataElementArrayWithY(int y) {
-        ArrayList dataArr = new ArrayList();
-        int x = 0;
-        Random random = new Random();
-        int x2 = (int) (x + random.Next(0, 10));
+        var dataArr = new ArrayList();
+        var x = 0;
+        var random = new Random();
+        var x2 = x + random.Next(0, 10);
 
-        for (int i = 0; i < 50; i++) {
-            Dictionary<string, int> dataElementDic = new Dictionary<string, int>();
-            dataElementDic.Add("x",x);
-            dataElementDic.Add("x2",x2);
-            dataElementDic.Add("y",y);
+        for (var i = 0; i < 50; i++) {
+            var dataElementDic = new Dictionary<string, int>
+            {
+                { "x", x },
+                { "x2", x2 },
+                { "y", y }
+            };
             dataArr.Add(dataElementDic);
-            x = (int) x2 + random.Next(0, 1000);
-            x2 = (int) x + random.Next(0, 2000);
+            x = x2 + random.Next(0, 1000);
+            x2 = x + random.Next(0, 2000);
         }
         return dataArr.ToArray();
     }
