@@ -35,6 +35,19 @@ namespace AAChartsDotNet
         public object showInLegend;
         public object enableMouseTracking;
         public object reversed;
+        
+        private String[] keys;
+        private AALevelsElement[] levels;
+        private Boolean allowDrillToNode;
+        private object xAxis;
+        private object baseSeries;
+
+        private Object[] nodes;
+        private object nodeWidth;
+        private String cursor;
+        private String offset;           //The offset of an arc diagram nodes column in relation to the plotArea. The offset equal to 50% places nodes in the center of a chart. By default the series is placed so that the biggest node is touching the bottom border of the plotArea. Defaults to '100%'.
+        private object linkWeight;           //The global link weight. If not set, width is calculated per link, depending on the weight value. Defaults to undefined.
+        private Boolean centeredLinks;       //The option to center links rather than position them one after another. Defaults to false.
 
 
         public AASeriesElement Type(string prop)
@@ -210,23 +223,63 @@ namespace AAChartsDotNet
             reversed = prop;
             return this;
         }
+        
+        public AASeriesElement Keys(String[] prop) {
+            keys = prop;
+            return this;
+        }
+        
+        
+        public AASeriesElement Levels(AALevelsElement[] prop) {
+            levels = prop;
+            return this;
+        }
+
+        public AASeriesElement AllowDrillToNode(Boolean prop) {
+            allowDrillToNode = prop;
+            return this;
+        }
+
+        public AASeriesElement XAxis(int prop) {
+            xAxis = prop;
+            return this;
+        }
+
+        public AASeriesElement BaseSeries(int prop) {
+            baseSeries = prop;
+            return this;
+        }
+
+        public AASeriesElement Nodes(Object[] prop) {
+            nodes = prop;
+            return this;
+        }
+
+        public AASeriesElement NodeWidth(float prop) {
+            nodeWidth = prop;
+            return this;
+        }
+
+        public AASeriesElement Cursor(String prop) {
+            cursor = prop;
+            return this;
+        }
+
+        public AASeriesElement Offset(String prop) {
+            offset = prop;
+            return this;
+        }
+
+        public AASeriesElement LinkWeight(int prop) {
+            linkWeight = prop;
+            return this;
+        }
+
+        public AASeriesElement CenteredLinks(Boolean prop) {
+            centeredLinks = prop;
+            return this;
+        }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 }
